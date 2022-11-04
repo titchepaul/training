@@ -11,7 +11,7 @@ class Moth {
         console.log("Je me présente, je m'appelle "+this.name);
     }
 }
-interface Person{
+interface Persoon{
     name: string;
     eyes?: number;
     speak(a: string): string; //type: string + return string
@@ -21,7 +21,7 @@ let henri = new Moth("Henri ",2);
 console.log(henri);
 henri.speak();
 
-let helene: Person; 
+let helene: Persoon; 
 helene = {
     name: "Helene",
     eyes: 2,
@@ -29,7 +29,7 @@ helene = {
         return a + ' '+ this.name;
     }
 };
-const talkingPerson = (a: Person, b: string) => {
+const talkingPerson = (a: Persoon, b: string) => {
     return a.speak(b);
 }
 const resultat = talkingPerson(helene, "Bonjour");
