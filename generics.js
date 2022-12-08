@@ -1,6 +1,7 @@
+"use strict";
 // generics
-var couleurs = ["red", "blue", "green"]; //: string
-var couleurs2 = []; //string[]
+let couleurs = ["red", "blue", "green"]; //: string
+let couleurs2 = []; //string[]
 /*function identity(arg: number): number{
     return arg;
 }
@@ -29,14 +30,14 @@ console.log(typeof output4);
 function identity(arg) {
     return arg;
 }
-var output4 = identity({ title: "hello world" }); //: {title: string};
+let output4 = identity({ title: "hello world" }); //: {title: string};
 console.log(typeof output4);
-var objOne = { name: "Bart" };
-var objTwo = { age: 8 };
+const objOne = { name: "Bart" };
+const objTwo = { age: 8 };
 function objInArray(n, a) {
-    var data = [];
+    let data = [];
     data.push(n, a);
     return data;
 }
-var user = objInArray(objOne, objTwo);
+const user = objInArray(objOne, objTwo);
 console.log(user);

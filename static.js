@@ -1,15 +1,15 @@
-var Personnen = /** @class */ (function () {
-    function Personnen(name) {
+"use strict";
+class Personnen {
+    constructor(name) {
         this.name = name;
     }
-    Personnen.talk = function () {
+    static talk() {
         //console.log('je suis une personne '+ Personnen.age);
         console.log('je suis une personne ' + this.age);
-    };
-    Personnen.age = 30;
-    return Personnen;
-}());
-var person = new Personnen("toto");
+    }
+}
+Personnen.age = 30;
+const person = new Personnen("toto");
 Personnen.talk();
 //Personnen.talk();
 //Personnen.age;

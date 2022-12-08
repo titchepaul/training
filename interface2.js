@@ -1,31 +1,30 @@
-var Person = /** @class */ (function () {
-    function Person(nom, age) {
+"use strict";
+class Person {
+    constructor(nom, age) {
         this.nom = nom;
         this.age = age;
     }
-    Person.prototype.talk = function () {
-        return "Je m'appele ".concat(this.nom);
-    };
-    return Person;
-}());
-var Alien = /** @class */ (function () {
-    function Alien(nom, age) {
+    talk() {
+        return `Je m'appele ${this.nom}`;
+    }
+}
+class Alien {
+    constructor(nom, age) {
         this.nom = nom;
         this.age = age;
     }
-    Alien.prototype.telepathy = function () {
-        return "je m'appelle ".concat(this.nom, ". je suis un ado de ").concat(this.age);
-    };
-    return Alien;
-}());
-var forms = document.getElementById('signupForm');
-var firstN = document.getElementById('firstName');
-var agess = document.getElementById('age');
-var species = document.getElementById('species');
-forms.addEventListener('submit', function (e) {
+    telepathy() {
+        return `je m'appelle ${this.nom}. je suis un ado de ${this.age}`;
+    }
+}
+const forms = document.getElementById('signupForm');
+const firstN = document.getElementById('firstName');
+const agess = document.getElementById('age');
+const species = document.getElementById('species');
+forms.addEventListener('submit', (e) => {
     e.preventDefault();
-    var humamUsers;
-    var alienUsers;
+    let humamUsers;
+    let alienUsers;
     if (species.value === "human") {
         humamUsers = new Person(firstN.value, agess.valueAsNumber);
         console.log(humamUsers, humamUsers.talk());

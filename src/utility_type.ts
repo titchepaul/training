@@ -12,7 +12,7 @@ interface Todo {
 
     return myTodo;
 }*/
-function addTod(title: string, description: string): Todo{
+function addTodo(title: string, description: string): Todo{
     let myTodo: Partial<Todo> = {};
     myTodo.title =  title;
     myTodo.description = description;
@@ -20,5 +20,5 @@ function addTod(title: string, description: string): Todo{
     return myTodo as Todo;
     //return <Todo> myTodo;
 }
-const todo = addTod("Sport", "Faire un footing");
-console.log(todo);
+const tod = addTodo("Sport", "Faire un footing");
+console.log(tod);

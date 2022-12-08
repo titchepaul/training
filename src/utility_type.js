@@ -7,12 +7,12 @@
 
     return myTodo;
 }*/
-function addTod(title, description) {
+function addTodo(title, description) {
     let myTodo = {};
     myTodo.title = title;
     myTodo.description = description;
     return myTodo;
     //return <Todo> myTodo;
 }
-const todo = addTod("Sport", "Faire un footing");
-console.log(todo);
+const tod = addTodo("Sport", "Faire un footing");
+console.log(tod);

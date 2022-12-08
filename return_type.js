@@ -1,18 +1,15 @@
+"use strict";
 function fetchUser(id, username) {
     return {
-        id: id,
-        username: username
+        id,
+        username
     };
 }
 fetchUser(2, "Mario");
-function fetchLoggedUser() {
-    var params = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        params[_i] = arguments[_i];
-    }
-    var memberData = fetchUser.apply(void 0, params);
+function fetchLoggedUser(...params) {
+    const memberData = fetchUser(...params);
     console.log(memberData);
-    var user = {
+    let user = {
         id: 4,
         username: "toto"
     };

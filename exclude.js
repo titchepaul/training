@@ -1,9 +1,8 @@
+"use strict";
 //exclure des ...
 //type T0 = Exclude<"a" | "b" | "c" | (() => void), Function>
-var UIElement = /** @class */ (function () {
-    function UIElement() {
-    }
-    UIElement.prototype.animate = function (x, y, easing) {
+class UIElement {
+    animate(x, y, easing) {
         if (easing === "ease-in") {
             console.log("ease-in");
         }
@@ -13,8 +12,7 @@ var UIElement = /** @class */ (function () {
         if (easing === "ease-in-out") {
             console.log("ease-in-out");
         }
-    };
-    return UIElement;
-}());
-var button = new UIElement();
+    }
+}
+let button = new UIElement();
 button.animate(0, 0, "ease-in");

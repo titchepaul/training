@@ -1,27 +1,27 @@
-var Moth = /** @class */ (function () {
-    function Moth(n, e) {
+"use strict";
+class Moth {
+    constructor(n, e) {
         this.name = n;
         this.eyes = e;
     }
-    Moth.prototype.speak = function () {
+    speak() {
         console.log("Je me présente, je m'appelle " + this.name);
-    };
-    return Moth;
-}());
-var henri = new Moth("Henri ", 2);
+    }
+}
+let henri = new Moth("Henri ", 2);
 console.log(henri);
 henri.speak();
-var helene;
+let helene;
 helene = {
     name: "Helene",
     eyes: 2,
-    speak: function (a) {
+    speak(a) {
         return a + ' ' + this.name;
     }
 };
-var talkingPerson = function (a, b) {
+const talkingPerson = (a, b) => {
     return a.speak(b);
 };
-var resultat = talkingPerson(helene, "Bonjour");
+const resultat = talkingPerson(helene, "Bonjour");
 console.log(resultat);
 //console.log(helene);
